@@ -1,0 +1,90 @@
+apply plugin: 'com.android.application'
+apply plugin: 'android-apt'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.0"
+
+    defaultConfig {
+        applicationId "com.project.seoulmarket"
+        minSdkVersion 15
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+    dexOptions {
+        javaMaxHeapSize "4g"
+    }
+}
+
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:23.0.0'
+    compile 'com.android.support:design:23.0.0'
+    compile 'com.android.support:cardview-v7:23.0.0'
+    compile 'com.android.support:recyclerview-v7:23.0.0'
+    compile 'com.google.code.gson:gson:2.6.2'
+    compile 'com.squareup.retrofit2:retrofit:2.1.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.1.0'
+    compile 'com.squareup.okhttp3:okhttp:3.0.1'
+    compile 'com.squareup.okhttp3:okhttp-urlconnection:3.0.1'
+
+    //폰트적용
+    compile 'com.tsengvn:typekit:1.0.1'
+
+    //원 이미지
+    compile 'de.hdodenhof:circleimageview:2.1.0'
+    //달력
+    compile 'com.github.traex.calendarlistview:library:1.2.3'
+
+    //
+    compile 'com.android.support:multidex:1.0.0'
+
+    compile group: 'com.kakao.sdk', name: 'kakaolink', version: project.KAKAO_SDK_VERSION
+    // 카카오스토리 sdk를 사용하기 위해 필요.
+    compile group: 'com.kakao.sdk', name: 'kakaostory', version: project.KAKAO_SDK_VERSION
+    // 카카오톡 sdk를 사용하기 위해 필요.
+    compile group: 'com.kakao.sdk', name: 'kakaotalk', version: project.KAKAO_SDK_VERSION
+    // push sdk를 사용하기 위해 필요.
+    compile group: 'com.kakao.sdk', name: 'push', version: project.KAKAO_SDK_VERSION
+
+    //
+    compile 'com.facebook.android:facebook-android-sdk:4.1.0'
+
+    //FCM
+    compile 'com.google.firebase:firebase-core:9.0.0'
+    compile 'com.google.firebase:firebase-messaging:9.0.0'
+
+
+    //이미지 url을 통해 이미지 뿌려주는 라이브러리
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+
+    //viewpager DotIndicator
+    compile 'com.matthew-tamlin:sliding-intro-screen:2.1.2'
+    compile 'com.github.devlight.navigationtabbar:navigationtabbar:1.2.5'
+
+    //StickyScrollViewItems
+    compile 'se.emilsjolander:StickyScrollViewItems:1.1.0'
+
+    // 구글 지도
+    compile 'com.google.android.gms:play-services:9.0.0'
+    
+    //
+    compile 'com.jakewharton:butterknife:8.1.0'
+    apt 'com.jakewharton:butterknife-compiler:8.1.0'
+}
+//firebase
+apply plugin: 'com.google.gms.google-services'
