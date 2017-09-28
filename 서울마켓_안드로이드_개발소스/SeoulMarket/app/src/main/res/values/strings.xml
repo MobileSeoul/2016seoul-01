@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">서울마켓</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+
+    <string name="facebook_app_id">facebook_app_id</string>
+    <string name="title_activity_maps">Map</string>
+
+    <string name="str_done">완료</string>
+
+    <string name="error_field_required">필수 항목입니다.</string>
+    <string name="error_field_doubled">중복 항목입니다.</string>
+    <string name="error_network">네트워크 환경을 확인해주세요.</string>
+
+</resources>

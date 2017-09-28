@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.project.seoulmarket.report.view.ReportStepTwoActivity"
+    android:orientation="vertical"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#dfdfdf"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/recruit_content_background"
+        android:layout_margin="20dp"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="20dp"
+                android:weightSum="10"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:text="* 마켓시간"
+                    android:textColor="@color/mainPupple"
+                    android:textSize="15sp"
+                    android:gravity="right"
+                    app:font="Bold"/>
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="7"
+                    android:gravity="center">
+
+                    <LinearLayout
+                        android:id="@+id/startTimeArea"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/startHour"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/mainBlack"
+                            android:textSize="14sp"
+                            android:text="00"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/mainBlack"
+                            android:textSize="14sp"
+                            android:text=" : "/>
+
+                        <TextView
+                            android:id="@+id/startMinute"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/mainBlack"
+                            android:textSize="14sp"
+                            android:text="00"/>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:textColor="@color/mainBlack"
+                        android:textSize="14sp"
+                        android:text="~"/>
+
+                    <LinearLayout
+                        android:id="@+id/endTimeArea"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/endHour"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/mainBlack"
+                            android:textSize="14sp"
+                            android:text="00"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#000000"
+                            android:textSize="14sp"
+                            android:text=" : "/>
+
+                        <TextView
+                            android:id="@+id/endMinute"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/mainBlack"
+                            android:textSize="14sp"
+                            android:text="00"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="10">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:textColor="@color/mainPupple"
+                    android:textSize="15sp"
+                    android:gravity="right"
+                    app:font="Bold"
+                    android:text="* 진행기간"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="10dp"
+                >
+
+                <com.andexert.calendarlistview.library.DayPickerView
+                    android:id="@+id/pickerView"
+                    xmlns:calendar="http://schemas.android.com/apk/res-auto"
+                    android:layout_width="match_parent"
+                    android:layout_height="310dp"
+                    calendar:drawRoundRect="true"
+                    calendar:headerMonthHeight="50dp"
+                    calendar:calendarHeight="270dp"
+                    calendar:textSizeMonth="14sp"
+                    calendar:colorCurrentDay="#4584EE"
+                    calendar:colorSelectedDayBackground="#927DFF"
+                    calendar:colorDayName="#727272"
+                    calendar:colorMonthName="#727272"
+                    calendar:colorNormalDay="#727272"
+                    />
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/nextBtn"
+                android:layout_width="110dp"
+                android:layout_height="36dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/dialog_location_background"
+                android:textSize="16sp"
+                app:font="Bold"
+                android:text="다음"
+                android:textColor="#ffffff"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context="com.project.seoulmarket.login.LoginActivity"
+    android:background="#ffffff">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#dfdfdf"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginRight="100dp"
+        android:gravity="center">
+
+
+        <ImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/profile_image"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_blanket"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <com.kakao.usermgmt.LoginButton
+            android:id="@+id/com_kakao_login"
+            android:layout_marginTop="80dp"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_gravity="bottom"
+            />
+
+        <com.facebook.login.widget.LoginButton
+            android:id="@+id/login_with_facebook"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center_horizontal"
+            android:textSize="16sp"
+            app:font="Bold"
+            android:text="페이스북 로그인"/>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

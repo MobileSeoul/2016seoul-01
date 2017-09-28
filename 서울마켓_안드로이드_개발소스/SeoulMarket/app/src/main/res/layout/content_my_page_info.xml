@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="#d9d9d9">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="34dp"
+        android:paddingLeft="16dp"
+        android:gravity="center_vertical"
+        android:background="#ffffff">
+
+        <TextView
+            android:id="@+id/userNickName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/mainYellow"
+            android:textSize="10sp"
+            android:text="닉네임"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/mainGray"
+            android:textSize="10sp"
+            android:text=" 님의 정보"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <LinearLayout
+            android:layout_width="300dp"
+            android:layout_height="400dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="46dp"
+            android:background="@drawable/ic_window1"
+            android:orientation="vertical">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/profile_image"
+                android:layout_marginTop="60dp"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_blanket"
+                app:civ_border_width="0dp"
+                app:civ_border_color="#FF000000"/>
+
+
+            <TextView
+                android:id="@+id/userNickNameTextview"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/mainYellow"
+                android:textSize="20sp"
+                app:font="Bold"
+                android:text="1"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="vertical"
+                android:layout_weight="5">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginTop="20dp">
+
+                    <TextView
+                        android:id="@+id/loginMethod"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textColor="@color/mainPupple"
+                        android:textSize="10sp"
+                        android:text="Kakao "/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textColor="@color/mainGray"
+                        android:textSize="10sp"
+                        android:text=" 연동 중"/>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:layout_marginTop="20dp">
+
+                    <Button
+                        android:id="@+id/logoutBtn"
+                        android:layout_width="154dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/dialog_location_background"
+                        android:textColor="#ffffff"
+                        android:textSize="16sp"
+                        app:font="Bold"
+                        android:text="로그아웃"/>
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

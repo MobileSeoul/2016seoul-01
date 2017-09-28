@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/locaionView"
+    android:background="#80000000"
+    android:gravity="center">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:background="@drawable/ic_window1"
+        android:orientation="vertical"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="48dp"
+                android:orientation="vertical"
+                >
+
+                <TextView
+                    android:id="@+id/msgTitile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="로그아웃 하시겠습니까?"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:textSize="23sp"
+                    android:textColor="#927DFF"
+                    app:font="Bold"
+                    />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="12dp"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/completeBtn"
+                android:layout_width="110dp"
+                android:layout_height="38dp"
+                android:textColor="#ffffff"
+                android:textSize="16sp"
+                android:layout_marginRight="20dp"
+                app:font="Bold"
+                android:background="@drawable/dialog_location_background"
+                android:text="확인"/>
+
+            <Button
+                android:id="@+id/cancelBtn"
+                android:layout_width="110dp"
+                android:layout_height="38dp"
+                android:textColor="#ffffff"
+                android:textSize="16sp"
+                app:font="Bold"
+                android:background="@drawable/dialog_location_background"
+                android:text="취소"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+</LinearLayout>

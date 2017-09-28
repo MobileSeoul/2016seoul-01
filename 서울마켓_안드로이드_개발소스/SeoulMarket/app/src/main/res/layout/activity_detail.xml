@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.project.seoulmarket.detail.DetailActivity"
+    android:orientation="vertical"
+    android:background="#ffffff">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+        <com.emilsjolander.components.StickyScrollViewItems.StickyScrollView
+            android:id="@+id/sticky_scroll"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <!-- scroll view child goes here -->
+
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="256dp"
+                    android:background="#E7E7E7">
+
+                    <android.support.v4.view.ViewPager
+                        android:id="@+id/pager"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        tools:context=".detail.DetailActivity" />
+
+                    <com.matthewtamlin.sliding_intro_screen_library.DotIndicator
+                        android:id="@+id/pager_indicator"
+                        android:layout_width="match_parent"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="3dp"
+                        android:layout_height="20dp"/>
+
+                    <RelativeLayout
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:layout_marginRight="8dp">
+
+
+                        <TextView
+                            android:id="@+id/likeCount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="123"
+                            android:textColor="@color/mainYellow"
+                            android:layout_centerHorizontal="true"
+                            android:textSize="12sp"/>
+
+                        <ImageView
+                            android:id="@+id/likehHeart"
+                            android:layout_marginTop="5dp"
+                            android:layout_width="46dp"
+                            android:layout_height="46dp"
+                            android:src="@drawable/ic_heart_fill"/>
+
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:background="#ffffff"
+                    android:weightSum="10">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="6.5"
+                        android:paddingLeft="20dp"
+                        android:paddingTop="14dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/marketName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textColor="#927DFF"
+                            app:font="Custom1"
+                            android:textSize="18sp"/>
+
+
+
+
+                        <LinearLayout
+                            android:layout_marginTop="8dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical">
+
+                            <ImageView
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:src="@drawable/ic_picker_small"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/mainPupple"
+                                android:textSize="10sp"
+                                android:text="위치 : "/>
+                            <TextView
+                                android:id="@+id/marketLocation"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="10sp"
+                                android:textColor="@color/mainPupple"
+                                android:text=""/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/tagArea"
+                            android:layout_marginTop="12dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3.5"
+                        android:orientation="vertical"
+                        android:gravity="right">
+
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginRight="12dp"
+                            >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="제보자 : "
+                                android:textColor="#727272"
+                                android:textSize="8sp"/>
+
+                            <TextView
+                                android:id="@+id/finderName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=""
+                                android:textColor="#727272"
+                                android:textSize="8sp"
+                                />
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="8dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            >
+
+                            <LinearLayout
+                                android:id="@+id/showLocation"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_marginRight="2dp"
+                                android:gravity="center">
+
+                                <ImageView
+                                    android:layout_width="46dp"
+                                    android:layout_height="46dp"
+                                    android:src="@drawable/ic_map"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="위치보기"
+                                    android:textColor="@color/gray"
+                                    android:textSize="8dp"/>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/marketReview"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:gravity="center">
+
+                                <ImageView
+                                    android:layout_width="46dp"
+                                    android:layout_height="46dp"
+                                    android:src="@drawable/ic_review"/>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="후기쓰기"
+                                    android:textColor="@color/gray"
+                                    android:textSize="8dp"/>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#dfdfdf"/>
+
+                <!--여기가 탭 타이틀 ...고정될 곳-->
+                <FrameLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:tag="sticky-nonconstant-hastransparancy">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:weightSum="2">
+
+                        <RelativeLayout
+                            android:id="@+id/basicInfo"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="#ffffff">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="기본 정보"
+                                android:gravity="center"
+                                android:textColor="#000000"
+                                android:textSize="14sp"/>
+
+                            <View
+                                android:id="@+id/basicInfoArea"
+                                android:layout_width="match_parent"
+                                android:layout_height="2dp"
+                                android:background="@color/mainYellow"
+                                android:layout_alignParentBottom="true"/>
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/reviewInfo"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="#ffffff">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="후기 보기"
+                                android:gravity="center"
+                                android:textColor="#000000"
+                                android:textSize="14sp"/>
+
+                            <View
+                                android:id="@+id/reviewInfoArea"
+                                android:layout_width="match_parent"
+                                android:layout_height="2dp"
+                                android:background="@color/mainYellow"
+                                android:visibility="invisible"
+                                android:layout_alignParentBottom="true"/>
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+
+                </FrameLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#dfdfdf"/>
+                <!--여기가 탭 내용 -->
+
+                <LinearLayout
+                    android:id="@+id/contentArea"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <include layout="@layout/content_basicinfo" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+
+        </com.emilsjolander.components.StickyScrollViewItems.StickyScrollView>
+
+        <ImageView
+            android:id="@+id/moveTopBtn"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="26dp"
+            android:layout_width="54dp"
+            android:layout_height="54dp"
+            android:src="@drawable/ic_up"/>
+
+    </RelativeLayout>
+</LinearLayout>

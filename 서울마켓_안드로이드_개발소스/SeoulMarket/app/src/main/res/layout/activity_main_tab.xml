@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.project.seoulmarket.main.view.MainTabActivity"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#dfdfdf"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/mainTitleArea"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="2"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/findLocationBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:background="#ffffff"
+                    android:textSize="14sp"
+                    android:textColor="#000000"
+                    android:text="위치별검색"/>
+
+                <View
+                    android:id="@+id/findLocationArea"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/mainYellow"
+                    android:visibility="invisible"
+                    android:layout_alignParentBottom="true"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/findDateBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:background="#ffffff"
+                    android:textSize="14sp"
+                    android:textColor="#000000"
+                    android:text="날짜별검색"/>
+
+                <View
+                    android:id="@+id/findDateArea"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/mainYellow"
+                    android:visibility="invisible"
+                    android:layout_alignParentBottom="true"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/searchMarketArea"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:background="#ffffff"
+            android:weightSum="10"
+            android:visibility="invisible"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp">
+
+            <EditText
+                android:id="@+id/requestInputEdit"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:singleLine="true"
+                android:maxLength="15"
+                android:layout_weight="8"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:textSize="14sp"
+                android:background="@drawable/join_background"/>
+
+            <TextView
+                android:id="@+id/requestSearch"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:textSize="14sp"
+                android:gravity="center"
+                android:textColor="@color/mainYellow"
+                android:text="검색"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#dfdfdf"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="#ffffff"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/middleUserName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/mainYellow"
+            android:textSize="13sp"
+            android:layout_marginLeft="14dp" />
+
+        <TextView
+            android:id="@+id/middleTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/mainGray"
+            android:textSize="13sp"
+            android:text="인기 마켓 순위"/>
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/mainArea"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="56dp">
+
+            <include
+                layout="@layout/activity_main_basic" />
+
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+
+        <ImageView
+            android:id="@+id/moveTopBtn"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_width="54dp"
+            android:layout_height="54dp"
+            android:layout_marginBottom="64dp"
+            android:layout_marginRight="12dp"
+            android:src="@drawable/ic_up"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#dfdfdf"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:background="#ffffff"
+                android:weightSum="9">
+
+                <RelativeLayout
+                    android:id="@+id/noitfyMarket"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3">
+
+                    <ImageView
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:src="@drawable/ic_myplace_2"
+                        android:layout_marginTop="5dp"
+                        android:layout_centerHorizontal="true"/>
+
+                    <TextView
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/mainBlack"
+                        android:layout_marginBottom="8dp"
+                        android:text="마켓제보"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/recruitSeller"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3">
+
+                    <ImageView
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:src="@drawable/ic_myplace_4"
+                        android:layout_marginTop="5dp"
+                        android:layout_centerHorizontal="true"/>
+
+                    <TextView
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/mainBlack"
+                        android:layout_marginBottom="8dp"
+                        android:text="셀러 모집"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/myPage"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3">
+
+                    <ImageView
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:src="@drawable/ic_main_3"
+                        android:layout_marginTop="5dp"
+                        android:layout_centerHorizontal="true"/>
+
+                    <TextView
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/mainBlack"
+                        android:layout_marginBottom="8dp"
+                        android:text="나의 공간"/>
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+
+
+
+
+</LinearLayout>

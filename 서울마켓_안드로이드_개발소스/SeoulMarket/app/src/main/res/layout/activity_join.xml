@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.project.seoulmarket.join.JoinActivity"
+    android:orientation="vertical"
+    android:background="#ffffff">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#dfdfdf"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginRight="100dp"
+        android:gravity="center">
+
+
+        <ImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/profile_image"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_blanket"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <TextView
+            android:layout_marginTop="46dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            app:font = "Bold"
+            android:textColor="#727272"
+            android:text="닉네임을 입력해주세요."
+            android:gravity="center"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="60dp"
+            android:layout_marginRight="60dp"
+            android:weightSum="10">
+
+            <EditText
+                android:id="@+id/userNickname"
+                android:layout_width="0dp"
+                android:layout_height="36dp"
+                android:layout_weight="7"
+                android:layout_marginRight="10dp"
+                android:textSize="16sp"
+                android:background="@drawable/join_background"
+                android:singleLine="true"
+                android:maxLength="10"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:textColor="#000000"/>
+
+            <TextView
+                android:id="@+id/doubleCheck"
+                android:layout_width="0dp"
+                android:layout_height="36dp"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:background="@drawable/join_background_empty"
+                android:textColor="@color/mainPupple"
+                android:textSize="15sp"
+                app:font = "Bold"
+                android:text="중복확인"/>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/completeNickname"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="72dp"
+            android:layout_width="134dp"
+            android:layout_height="38dp"
+            android:background="@drawable/review_button_background"
+            android:textColor="#ffffff"
+            android:padding="5dp"
+            android:textSize="16sp"
+            app:font = "Bold"
+            android:text="가입완료"/>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

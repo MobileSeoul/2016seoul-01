@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="210dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardLinear">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardCornerRadius="0dp"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:weightSum="10">
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#80000000">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="18dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <!---->
+                    <!--<TextView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:gravity="center"-->
+                        <!--android:textSize="10sp"-->
+                        <!--android:textColor="#ffffff"-->
+                        <!--android:text="진행 상태"/>-->
+
+                    <TextView
+                        android:id="@+id/progressRate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:textSize="10dp"
+                        android:textColor="#ffffff"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:paddingTop="3dp"
+                        android:paddingBottom="3dp"
+                        android:text="D-20"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center"
+                    >
+
+                    <TextView
+                        android:id="@+id/marketLocation"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textSize="12sp"
+                        android:textColor="#ffffff"
+                        android:text=""/>
+
+                    <TextView
+                        android:id="@+id/marketName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_marginTop="12dp"
+                        android:textSize="24sp"
+                        android:textColor="#ffffff"
+                        android:text=""
+                        app:font="Bold"/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+
+    </android.support.v7.widget.CardView>
+</RelativeLayout>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.project.seoulmarket.report.view.ReportStepThreeActivity"
+    android:orientation="vertical"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:layout_weight="10">
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#dfdfdf"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#333">
+
+        <fragment
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+
+
+        <LinearLayout
+            android:id="@+id/searchMarketArea"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal"
+            android:background="#ffffff"
+            android:weightSum="10"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp">
+
+            <EditText
+                android:id="@+id/inputAddress"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:singleLine="true"
+                android:maxLength="15"
+                android:layout_weight="8"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:textSize="14sp"
+                android:background="@drawable/join_background"/>
+
+            <TextView
+                android:id="@+id/requestAddress"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:textSize="14sp"
+                android:gravity="center"
+                android:textColor="@color/mainYellow"
+                android:text="검색"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="340dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="70dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:background="#00ffffff">
+
+            <TextView
+                android:id="@+id/marketAddress"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:textColor="#ffffff"
+                app:font="Custom1"
+                android:background="@drawable/map_background"
+                android:text="도로명 주소로 입력해주세요."/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="340dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="10dp">
+
+            <Button
+                android:id="@+id/completeAddress"
+                android:layout_width="340dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/map2_background"
+                android:textSize="16sp"
+                android:textColor="#ffffff"
+                app:font="Bold"
+                android:text="위치설정완료"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</LinearLayout>

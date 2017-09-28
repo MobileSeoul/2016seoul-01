@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.project.seoulmarket.report.view.ReportStepFourActivity"
+    android:orientation="vertical"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/recruit_content_background"
+        android:layout_margin="20dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:weightSum="10"
+                android:layout_marginTop="20dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:textSize="16sp"
+                    android:textColor="@color/mainPupple"
+                    android:gravity="right"
+                    android:layout_marginRight="10dp"
+                    app:font="Bold"
+                    android:text="* 태그 설정"/>
+
+                <EditText
+                    android:id="@+id/inputMarketTag"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="5"
+                    android:textColor="#000000"
+                    android:background="@drawable/content_background"
+                    android:textSize="15sp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:singleLine="true"
+                    android:hint="태그 입력"
+                    android:maxLength="8"/>
+
+                <Button
+                    android:id="@+id/addMarketTagBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_weight="2"
+                    android:textColor="#ffffff"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="10dp"
+                    app:font="Bold"
+                    android:textSize="12sp"
+                    android:background="@drawable/dialog_location_background"
+                    android:text="추가"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/addMarketTagArea"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:orientation="horizontal">
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_marginTop="20dp"
+            android:weightSum="10">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:textSize="16sp"
+                android:textColor="@color/mainPupple"
+                android:gravity="right"
+                android:layout_marginRight="10dp"
+                app:font="Bold"
+                android:text="URL주소"/>
+
+
+            <EditText
+                android:id="@+id/inputMarketURL"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="7"
+                android:textColor="#000000"
+                android:background="@drawable/content_background"
+                android:textSize="15sp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:singleLine="true"
+                android:maxLength="15"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_marginTop="20dp"
+            android:weightSum="10">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:textSize="16sp"
+                android:textColor="@color/mainPupple"
+                android:gravity="right"
+                android:layout_marginRight="10dp"
+                app:font="Bold"
+                android:text="전화번호"/>
+
+            <EditText
+                android:id="@+id/inputPhoneNum"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_weight="7"
+                android:layout_marginRight="10dp"
+                android:textColor="#000000"
+                android:background="@drawable/content_background"
+                android:textSize="15sp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:singleLine="true"
+                android:inputType="number"
+                android:maxLength="15"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/imgArea"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:orientation="vertical"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="@color/mainPupple"
+                android:gravity="right"
+                android:layout_marginRight="10dp"
+                app:font="Bold"
+                android:text="* 이미지 첨부"/>
+
+
+            <LinearLayout
+                android:layout_marginTop="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/itemImg1"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_marginRight="8dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_camera_inbox_1" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/itemImg2"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_marginRight="8dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_camera_inbox_2" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/itemImg3"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_camera_inbox_2" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/itemImg4"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_marginRight="8dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_camera_inbox_2"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/itemImg5"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_marginRight="8dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_camera_inbox_2" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/itemImg6"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_camera_inbox_2"  />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/registerServer"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_width="110dp"
+                android:layout_height="36dp"
+                android:text="완료"
+                android:background="@drawable/dialog_location_background"
+                android:textSize="16sp"
+                app:font="Bold"
+                android:textColor="#ffffff"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

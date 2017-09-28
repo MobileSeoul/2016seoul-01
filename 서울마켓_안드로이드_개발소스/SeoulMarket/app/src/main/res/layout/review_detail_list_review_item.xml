@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/listview_comment"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:gravity="center_vertical"
+    android:background="@drawable/recruit_review_background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="vertical"
+        android:gravity="center_vertical"
+        android:layout_marginTop="1dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
+
+        <RelativeLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/reviewNickname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:textColor="@color/mainPupple"
+                    app:font="Bold"
+                    android:text="leejihee"/>
+
+                <TextView
+                    android:id="@+id/reviewContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="18dp"
+                    android:textColor="@color/mainGray"
+                    android:textSize="14sp"
+                    app:font="Custom1"
+                    android:text="gooooooooooood!"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="8dp"
+                android:gravity="right">
+
+                <TextView
+                    android:id="@+id/reviewDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/mainGray"
+                    android:textSize="10sp"
+                    app:font="Custom1"
+                    android:text="10/23"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

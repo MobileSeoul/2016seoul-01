@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#80000000"
+    android:gravity="center">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:background="@drawable/ic_window1"
+        android:orientation="vertical"
+        android:gravity="bottom|center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="해당 위치로 상세 설정하겠습니까?"
+            android:layout_marginBottom="20dp"
+            android:textSize="20sp"
+            android:textColor="#927DFF"
+            app:font="Bold"/>
+
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="14dp"
+            >
+            <Button
+                android:id="@+id/completeBtn"
+                android:layout_width="110dp"
+                android:layout_height="38dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/dialog_location_background"
+                android:text="확인"
+                android:textSize="16sp"
+                android:textColor="#FFFFFF"
+                app:font="Bold"/>
+
+            <Button
+                android:id="@+id/cancelBtn"
+                android:layout_width="110dp"
+                android:layout_height="38dp"
+                android:background="@drawable/dialog_location_background"
+                android:text="취소"
+                android:textSize="16sp"
+                android:textColor="#FFFFFF"
+                app:font="Bold"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

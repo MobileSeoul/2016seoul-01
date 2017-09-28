@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.project.seoulmarket">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the 'MyLocation' functionality. 
+    -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <application
+        android:name=".application.GlobalApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.kakao.sdk.AppKey"
+            android:value="@string/kakao_app_key" />
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <!-- 카카오 전 -->
+        <activity
+            android:name=".splash.view.SplashAcitivty"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".login.LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".login.KakaoSignupActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <!-- 아래 두개의 서비스 태그를 추가한다. -->
+        <service android:name=".firebase.FirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name=".firebase.FirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name=".detail.DetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".detail.review.RegisterReviewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".join.JoinActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".main.view.MainTabActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"
+            android:theme="@style/Theme.AppCompat.Light" />
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/. 
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name=".detail.maps.MapsActivity"
+            android:label="@string/title_activity_maps"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".mypage.view.MyPageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".report.view.ReportMarketActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".report.view.ReportStepTwoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".report.view.ReportStepThreeActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".report.view.ReportStepFourActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".recruit.view.RecruitActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".recruit.register.RecruitRegisterActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".recruit.view.RecruitDetailActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".detail.review.ReviewDetailActivity"
+            android:screenOrientation="portrait"></activity>
+    </application>
+
+</manifest>

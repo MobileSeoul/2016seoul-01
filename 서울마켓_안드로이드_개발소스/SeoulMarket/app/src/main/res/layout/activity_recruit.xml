@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".recruit.view.RecruitActivity"
+    android:orientation="vertical"
+    android:background="#ffffff"
+    android:gravity="center_horizontal">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#dfdfdf"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:paddingBottom="10dp"
+            android:layout_width="340dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@drawable/ic_window3"
+            android:elevation="10dp"
+            android:outlineProvider="bounds"
+            android:layout_centerHorizontal="true"
+            >
+
+            <ListView
+                android:layout_marginTop="30dp"
+                android:id="@+id/listview"
+                android:layout_width="300dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:dividerHeight="1dp"
+                android:divider="#d6d6d6"
+                >
+
+            </ListView>
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/addSeller"
+        android:layout_width="54dp"
+        android:layout_height="54dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="26dp"
+        android:src="@drawable/ic_write"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        />
+
+
+</RelativeLayout>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:id="@+id/TopTitle"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:gravity="center"
+        android:background="#ffffff">
+
+        <TextView
+            android:id="@+id/main_toolbar_title"
+            android:textColor="@color/mainYellow"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center_vertical"
+            android:textSize="14sp"
+            android:text=""
+            app:font="Bold"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="right"
+            android:layout_marginRight="10dp"
+            >
+
+            <ImageView
+                android:id="@+id/mapClose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/ic_x"/>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#333">
+
+        <fragment
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <LinearLayout
+            android:id="@+id/TopAddress"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:paddingLeft="60dp"
+            android:background="#80ffffff">
+
+            <TextView
+                android:id="@+id/marketAddress"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:textSize="10sp"
+                android:textColor="#555555"
+                android:text="경기도 수원시 영통구 청명로132"/>
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+
+
+
+</LinearLayout>

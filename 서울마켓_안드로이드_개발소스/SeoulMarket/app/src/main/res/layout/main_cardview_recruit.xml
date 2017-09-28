@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardLinear">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="5dp"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="20dp">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/mainBlack"
+                    app:font="Bold"
+                    android:textSize="18sp"
+                    android:text="제목 : "/>
+
+                <TextView
+                    android:id="@+id/recruitTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/mainBlack"
+                    app:font="Bold"
+                    android:textSize="18sp"
+                    android:text="셀러 모집해요!"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/mainPupple"
+                    android:textSize="10sp"
+                    android:text="날짜 : "/>
+
+                <TextView
+                    android:id="@+id/recruitDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/mainPupple"
+                    android:textSize="10sp"
+                    android:text=""/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/mainPupple"
+                    android:textSize="10sp"
+                    android:text=" / "/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/mainPupple"
+                    android:textSize="10sp"
+                    android:text="댓글수 : "/>
+
+                <TextView
+                    android:id="@+id/recruitCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/mainPupple"
+                    android:textSize="10sp"
+                    android:text=""/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/deleteRecruit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="11dp"
+                android:textSize="10sp"
+                android:textColor="#ffffff"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="2dp"
+                android:paddingBottom="2dp"
+                app:font="Custeom1"
+                android:text="삭제하기"
+                android:background="@drawable/dialog_location_background"/> 
+
+
+            <!--<TextView -->
+            <!--android:id="@+id/deleteRecruit" -->
+            <!--android:layout_alignParentRight="true" -->
+            <!--android:layout_centerVertical="true" -->
+            <!--android:layout_width="wrap_content" -->
+            <!--android:layout_height="wrap_content" -->
+            <!--android:textSize="10sp" -->
+            <!--android:textColor="@color/mainPupple" -->
+            <!--app:font="Bold" -->
+            <!--android:text="삭제"/>-->
+
+
+        </RelativeLayout>
+
+
+
+    </android.support.v7.widget.CardView>
+</RelativeLayout>
